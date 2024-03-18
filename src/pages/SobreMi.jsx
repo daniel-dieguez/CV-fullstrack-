@@ -1,4 +1,5 @@
 import React from 'react'
+import Style from '../styles/sobremi.module.css';
 
 export default function SobreMi() {
   return (

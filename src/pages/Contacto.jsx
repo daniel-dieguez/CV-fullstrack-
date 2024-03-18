@@ -4,6 +4,7 @@ import Register from '../form/Register';
 import validator from 'validator';
 import Swal from 'sweetalert2';
 import { isObjEmpty } from '../helper/Object';
+import Style from '../styles/contacto.module.css';
 
 
 

@@ -30,7 +30,7 @@ export default function Register( {errores, onSubmitCallback}) {
 
     
 
-    <Button className='mt-3' variant='primary' type='submit'>Inicia Sesion</Button>
+    <Button className='mt-3' variant='primary' type='submit'>Enviar</Button>
   </Form>
 
 )
