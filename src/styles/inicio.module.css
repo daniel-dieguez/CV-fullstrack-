@@ -1,3 +1,40 @@
 .cuerpoproyecto{
-   
+    background:url('../img/Fodnooo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+.titulos{
+    font-family:sans-serif;
+    text-align:center;
+
+
+}
+
+.fotopergil{
+    float: left;
+    width: 300px;
+    margin: 10px;
+    border: 5px;
+    transition: 5s linear;
+
+}
+
+.fotopergil:hover{
+    -webkit-transform:scale(1.1); 
+-webkit-box-shadow: 10px 10px 14px 2px rgba(199, 180, 180, 0.47);
+        box-shadow: 10px 10px 14px 2px rgba(185, 179, 179, 0.47);
+}
+
+.contenedorimagen{
+    display: flex;
+    justify-content: center;
+}
+
+.textocuerpo{
+    background-color: aliceblue;
+     
+
 }

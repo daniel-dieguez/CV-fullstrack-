@@ -9,7 +9,7 @@ export default function Navigation() {
     <Container>
           <Navbar.Brand as={NavLink} to='/inicio' href="#inicio">Inicio</Navbar.Brand>
           <Nav className="me-auto">
-          <Nav.Link as={NavLink} to='/sobreMi'>Sobre Mi</Nav.Link>
+          <Nav.Link as={NavLink} to='/proyecots'>Proyectos</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link as={NavLink} to='/experiencia'> Experiencia</Nav.Link>
@@ -17,7 +17,7 @@ export default function Navigation() {
           </Nav>
           <Nav>
           <NavDropdown title="Más" id="main-menu">
-            <NavDropdown.Item as={NavLink} to='/proyecots'>Proyectos</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/sobreMi' >Sobre Mi</NavDropdown.Item>
             <NavDropdown.Item as={NavLink} to='/lenguaejes'>Lenguajes</NavDropdown.Item>
 
           </NavDropdown>
