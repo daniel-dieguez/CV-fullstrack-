@@ -5,6 +5,7 @@ import validator from 'validator';
 import Swal from 'sweetalert2';
 import { isObjEmpty } from '../helper/Object';
 import Style from '../styles/contacto.module.css';
+import ApiContact from '../api/ApiContact';
 
 
 
@@ -48,7 +49,7 @@ const create = ({email, text}) =>{
 }
 
   return (
-    <div>
+    <div className={Style.cuerpoproyecto}>
     <Container className='mt-5'>
       <Row>
         <Col ms="12" md={{spna:8, offset: 2}} lg={{spna:6, offset:3}}>
@@ -62,6 +63,7 @@ const create = ({email, text}) =>{
         </Col>
       </Row>
     </Container>
+    <ApiContact></ApiContact>
   </div>
   )
 }

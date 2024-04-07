@@ -3,7 +3,7 @@ import Style from '../styles/sobremi.module.css';
 
 export default function SobreMi() {
   return (
-    <div>
+    <div className={Style.cuerpoproyecto}>
       <div>
         <h3>Datos generales</h3>
         <ul >

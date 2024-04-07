@@ -11,7 +11,7 @@ export default function Lenguajes() {
 
 
   return (
-    <div className=''>
+    <div className={Style.cuerpoproyecto}>
         <Cards></Cards>
     </div>
   )

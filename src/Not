@@ -1,0 +1,31 @@
+
+/*<div className={style.lenguajes}>
+      <img className={style.React} src={Reactjs} alt="" />
+      
+      <img className={style.Js} src={Js} alt="" />
+      <img className={style.Java} src={Java} alt="" />
+      <img src={Mysql} className={style.Mysql} alt="" />
+      
+      </div>
+
+.React{
+    height: 100px;
+    width: 100px;
+}
+.Js{
+    height: 100px;
+    width: 100px;
+}
+
+.Java{
+    height: 100px;
+    width: 100px;
+
+}
+
+.Mysql{
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+
+}*/

@@ -3,7 +3,7 @@ import Style from '../styles/experiencia.module.css'
 
 export default function Experiencia() {
   return (
-    <div>
+    <div className={Style.cuerpoproyecto}>
       <h1>Experiencia</h1>
       <div>
         <div>
