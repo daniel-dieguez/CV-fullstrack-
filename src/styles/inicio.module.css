@@ -7,17 +7,37 @@
 }
 
 .titulos{
-    font-family:sans-serif;
-    text-align:center;
+    text-align: center;
+}
 
+.nombre{
+    font-family:serif;
+    font-weight: 900;
+    font-size: 60px;
+    
 
+}
+.span{
+    color: brown;
+}
+.dessarrollo{
+    font-family:serif;
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.contenedorCuerpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fotopergil{
     float: left;
-    width: 300px;
+    width: 200px;
     margin: 10px;
-    border: 5px;
+    border: 10px;
+    border-radius: 50%;
     transition: 5s linear;
 
 }
@@ -28,10 +48,7 @@
         box-shadow: 10px 10px 14px 2px rgba(185, 179, 179, 0.47);
 }
 
-.contenedorimagen{
-    display: flex;
-    justify-content: center;
-}
+
 
 .textocuerpo{
     background-color: aliceblue;
@@ -40,8 +57,36 @@
 }
 
 .contactos{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
+/*
+.imges{
+    height: auto;
+    width: auto;
+    max-width: 10px;
+    max-height: 10px; 
+}*/
+.git{
+    width: 125px; 
+    margin: 10px;  
+}
+.instagram{
+    width: 125px;
+    margin: 10px; 
+}
+.correo{
+    width: 150px;
+    margin: 10; 
+}
+
+
+
 
 
 

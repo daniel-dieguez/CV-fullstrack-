@@ -5,7 +5,7 @@ import validator from 'validator';
 import Swal from 'sweetalert2';
 import { isObjEmpty } from '../helper/Object';
 import Style from '../styles/contacto.module.css';
-import ApiContact from '../api/ApiContact';
+import ApiGet from '../api/ApiGet';
 
 
 
@@ -55,7 +55,7 @@ const create = ({email, text}) =>{
         <Col ms="12" md={{spna:8, offset: 2}} lg={{spna:6, offset:3}}>
           <Card body>
             <h3>
-           Nuevo usuario
+           Contactame
             </h3>
             <hr></hr>
             <Register errores={errores} onSubmitCallback={create}></Register>
@@ -63,7 +63,7 @@ const create = ({email, text}) =>{
         </Col>
       </Row>
     </Container>
-    <ApiContact></ApiContact>
+    <ApiGet></ApiGet>
   </div>
   )
 }

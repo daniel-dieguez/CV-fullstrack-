@@ -1,16 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
+import style from '../styles/proyectos.module.css'
 
-export default function Calculadora() {
+export default function Calculadora() {const [value, setValue] = useState('');
+
+const handle =( e) =>{
+  setValue(value + e.target.innerHTML)
+}
+
+const equal = ()=>{
+  setValue(eval(value));
+
+}
+
+const delet = ()=>{
+  setValue("");
+}
+
+const deletPart = () =>{
+  setValue(value.toString().slice(0,-1))
+}
+
   return (
-    <div>
-       <h3> Calculadora </h3>
-      <p>Porfavor ingrese los datos siguiente en la calculadora:</p>
-      <ul>
-        <li> 4 + 4 </li>
-        <li>12*3</li>
-        <li>11203/50</li>
-        <li>Ahora ingrese la</li>
-      </ul>
+    <div className={style.Calculadora}>
+      
+    <p className={style.titulo}>Realiza tus calculos </p>
+    <div className={style.output}>
+      <div className={style.previos}> </div>
+      
+      <div className={style.currento}> {value} </div>
     </div>
+
+    
+    <button className={style.ac} onClick={delet}>AC</button>
+    <button onClick={deletPart}>DEL</button>
+    <button onClick={handle}>1</button>
+    <button onClick={handle} >2</button>
+    <button onClick={handle}>3</button>
+    <button onClick={handle}>4</button>
+    <button onClick={handle}>5</button>
+    <button onClick={handle}>6</button>
+    <button onClick={handle}>7</button>
+    <button onClick={handle}>8</button>
+    <button onClick={handle}>9</button>
+    <button onClick={handle}>0</button>
+    <button onClick={handle}>+</button>
+    <button onClick={handle}>-</button>
+    <button onClick={handle}>/</button>
+    <button onClick={handle}>.</button>
+    <button onClick={equal}>=</button>
+
+
+  </div>
+
   )
 }

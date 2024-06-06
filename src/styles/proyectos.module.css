@@ -5,3 +5,77 @@
     min-height: 100vh;
 
 }
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background:linear-gradient(to right, rgb(115, 215, 157), rgb(48, 48, 48));
+    
+}
+
+.titulo{
+    font-size: 30px;
+    color: rgb(16, 95, 164);
+    
+}
+
+.parrafo{
+   margin: 10px;
+    width: auto; /* Cambié a auto para que el texto no se corte */
+    text-align: left;
+    font-size: 10px;
+    grid-row: 1;
+}
+
+.Calculadora{
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem); /*acomodamos cuadros*/
+}
+
+.ac{
+    grid-column: span 2;
+}
+
+.Calculadora > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(246, 237, 237);
+    outline: none;
+    background-color: rgb(220, 238, 245);
+}
+
+.Calculadora > button:hover,
+.Calculadora > button:focus{
+    background-color: rgb(251, 0, 13);
+
+}
+
+.output{
+    grid-column:  1 / -1;
+    background-color: rgb(243, 9, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.output .previos{
+    color: aliceblue;
+    font-size:  2.5rem;
+
+}
+
+.output .currento{
+    color: aliceblue;
+    font-size: 2.5rem;
+}
