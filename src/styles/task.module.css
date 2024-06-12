@@ -1,0 +1,96 @@
+
+.body{
+    background-color: black;
+}
+
+
+.lista{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 100px;
+
+
+}
+
+.titulo{
+    font-size: 6rem;
+    color: rgb(250, 242, 242);
+}
+
+.agregar, .subirTarea, .bajarTarea, .eliminarTarea{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: rgb(251, 249, 247);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+    
+}
+
+.agregar{
+    background-color: rgb(0, 209, 7);
+
+}
+
+.agregar:hover{
+    background-color: rgb(5, 135, 40);
+}
+
+.eliminarTarea{
+    background-color: rgb(255, 0, 0);
+}
+
+.eliminarTarea:hover{
+    background-color: rgb(131, 9, 9);
+}
+
+.subirTarea{
+    background-color: #025299;
+
+}
+
+.subirTarea:hover{
+    background-color: rgb(4, 42, 111);
+}
+
+.bajarTarea{
+    background-color: rgb(249, 96, 8);
+}
+
+.bajarTarea:hover{
+    background-color: rgb(218, 57, 3);
+}
+
+.inputTask[type="text"]{
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 2px solid color(srgb red green blue);
+    color: black;
+}
+
+ol{
+    padding: 0;
+}
+
+.bineta{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgb(235, 234, 232);
+    margin-bottom: 10px;
+    border: 3px solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.texto{
+flex: 1;
+}
+
+.eliminarTarea, .subirTarea, .bajarTarea{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
