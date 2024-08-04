@@ -10,11 +10,11 @@ export default function Tareas() {
     const [newTask, setNewTask] = useState('');
     const [id, setId] = useState("");
 
-    const URL = 'http://localhost:9000/lista/tareas';
+    const URLGet = 'http://localhost:9000/task/viewAll';
 
 
     useEffect(() => {
-        axios.get(URL)
+        axios.get(URLGet)
             .then(response => {
                 console.log(response.data);
                 SetTask(response.data);
@@ -33,6 +33,8 @@ export default function Tareas() {
 
     const addTask = async () => {
 
+        const urlAdd = 'http://localhost:9000/task/create';
+
         if (newTask.trim() !== "") {
 
             const data = {
@@ -40,7 +42,7 @@ export default function Tareas() {
             }
 
             try {
-                const response = await fetch(URL, {
+                const response = await fetch(urlAdd, {
                     method: 'POST',
                     body: JSON.stringify(data),
                     headers: { 'Content-Type': 'application/json' },
@@ -51,9 +53,10 @@ export default function Tareas() {
                 }
 
                 const result = await response.json();
-                SetTask(t => [...t, result]);
-                setNewTask("");
                 console.log("la peticion fue un exito ", result);
+                SetTask(t => [...t, { ...result, notas: result.notas || newTask }]);
+            setNewTask('');
+
             } catch (error) {
                 console.log("error en la peticion")
             }
@@ -69,8 +72,9 @@ export default function Tareas() {
             return;
         }
 
+        const urlDele = 'http://localhost:9000/task/delete';
         try {
-            const response = await fetch(`${URL}/${id_listado}`, {
+            const response = await fetch(`${urlDele}/${id_listado}`, {
                 method: 'DELETE',
             });
 
