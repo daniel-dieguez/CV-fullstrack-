@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from '../styles/proyectos.module.css'
+import style from '../styles/calculadora.module.css'
 
 export default function Calculadora() {const [value, setValue] = useState('');
 
@@ -21,9 +21,9 @@ const deletPart = () =>{
 }
 
   return (
-    <div className={style.Calculadora}>
-      
-    <p className={style.titulo}>Realiza tus calculos </p>
+    <div>
+      <p className={style.titulo}>Realiza tus calculos </p>
+      <div className={style.Calculadora}>
     <div className={style.output}>
       <div className={style.previos}> </div>
       
@@ -50,6 +50,7 @@ const deletPart = () =>{
     <button onClick={equal}>=</button>
 
 
+    </div>
   </div>
 
   )

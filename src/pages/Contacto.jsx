@@ -5,7 +5,7 @@ import validator from 'validator';
 import Swal from 'sweetalert2';
 import { isObjEmpty } from '../helper/Object';
 import Style from '../styles/contacto.module.css';
-import ApiGet from '../api/ApiGet';
+
 
 
 
@@ -16,10 +16,8 @@ export default function Contacto() {
 
 const create = ({email, text}) =>{
 
-
   const errores = {};
   setErrores(errores);
-
   
   if(!validator.isEmail(email)){
     errores.email = 'El correo electronico es invalido';
@@ -29,7 +27,6 @@ const create = ({email, text}) =>{
     errores.text = 'Debes de agregar un comentario '
   }
 
-  
 
   if(!isObjEmpty(errores)){ //si el objeto esta vacio este brindara un error
     setErrores(errores);
@@ -63,7 +60,6 @@ const create = ({email, text}) =>{
         </Col>
       </Row>
     </Container>
-    <ApiGet></ApiGet>
   </div>
   )
 }

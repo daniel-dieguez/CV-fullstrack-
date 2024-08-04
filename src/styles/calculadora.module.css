@@ -9,16 +9,12 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
-
-body{
-    margin: 0;
-    background:linear-gradient(to right, rgb(115, 215, 157), rgb(48, 48, 48));
-    
-}
+ 
 
 .titulo{
     font-size: 30px;
     color: rgb(16, 95, 164);
+    text-align: center;
     
 }
 
@@ -47,7 +43,8 @@ body{
     font-size: 2rem;
     border: 1px solid rgb(246, 237, 237);
     outline: none;
-    background-color: rgb(220, 238, 245);
+    background-color: rgb(1, 9, 12);
+    color: aliceblue;
 }
 
 .Calculadora > button:hover,
@@ -79,3 +76,8 @@ body{
     color: aliceblue;
     font-size: 2.5rem;
 }
+
+
+ 
+
+ 

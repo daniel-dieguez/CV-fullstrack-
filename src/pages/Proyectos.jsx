@@ -1,11 +1,10 @@
 import React from 'react'
-import Styel from '../styles/proyectos.module.css';
+import Styel from '../styles/calculadora.module.css';
 import Calculadora from '../proyects/Calculadora';
-import ListaNames from '../proyects/ListaNames';
-import ListaPokemon from '../proyects/ListaPokemon';
 import Tareas from '../proyects/Tareas';
 import TarjetaCredito from '../proyects/TarjetaCredito'
-import Style from '../styles/proyectos.module.css';
+import Tashbaord from '../proyects/dashbaord';
+
 
 
 export default function Proyectos() {
@@ -18,10 +17,9 @@ export default function Proyectos() {
       </p>
 
       <Calculadora></Calculadora>
-      <ListaNames></ListaNames>
       <Tareas></Tareas>
       <TarjetaCredito></TarjetaCredito>
-      <ListaPokemon></ListaPokemon>
+      <Tashbaord></Tashbaord>
 
      
 

@@ -25,7 +25,7 @@ export default function Register( {errores, onSubmitCallback}) {
     comentario_usuario: text
 };
 
-  const URL = "http://localhost:9000/registro/v1/cv/registro";
+  const URL = "http://localhost:9000/contacto/sendEmail";
   fetch(URL,{
     method: 'POST',
     body: JSON.stringify(data),
