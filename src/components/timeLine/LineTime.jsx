@@ -5,8 +5,8 @@ import { BiSolidLandmark } from "react-icons/bi";
 import { AiFillRobot } from "react-icons/ai";
 import { AiOutlineJava } from "react-icons/ai";
 import { AiTwotoneFile } from "react-icons/ai";
-import style from '../styles/sobremi.module.css'
-import  '../styles/sobremi.module.css'
+import style from '../../styles/sobremi.module.css'
+import '../../styles/sobremi.module.css'
 
 export default function LineTime() {
     return (

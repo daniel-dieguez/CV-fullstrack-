@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
-import Reactjs from '../img/react.png'; 
 
 export default function Files() {
 

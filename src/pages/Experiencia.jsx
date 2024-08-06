@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../styles/experiencia.module.css';
-import Files from '../helper/Files';
+import Files from '../components/experiencia/Files';
 
 
 export default function Experiencia() {

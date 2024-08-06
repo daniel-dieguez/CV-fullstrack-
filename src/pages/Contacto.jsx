@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { Row, Col, Container, Card } from 'react-bootstrap';
-import Register from '../form/Register';
+import Register from '../components/form/Register';
 import validator from 'validator';
 import Swal from 'sweetalert2';
-import { isObjEmpty } from '../helper/Object';
+import { isObjEmpty } from '../components/form/helper/Object';
 import Style from '../styles/contacto.module.css';
 
 

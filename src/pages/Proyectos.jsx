@@ -2,7 +2,7 @@ import React from 'react'
 import Styel from '../styles/calculadora.module.css';
 import Calculadora from '../proyects/Calculadora';
 import Tareas from '../proyects/Tareas';
-import TarjetaCredito from '../proyects/TarjetaCredito'
+import ComentariosUsers from '../proyects/ComentariosUsers'
 import Tashbaord from '../proyects/dashbaord';
 
 
@@ -18,7 +18,7 @@ export default function Proyectos() {
 
       <Calculadora></Calculadora>
       <Tareas></Tareas>
-      <TarjetaCredito></TarjetaCredito>
+      <ComentariosUsers></ComentariosUsers>
       <Tashbaord></Tashbaord>
 
      

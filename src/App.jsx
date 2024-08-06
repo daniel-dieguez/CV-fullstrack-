@@ -5,7 +5,7 @@ import Lenguajes from './pages/Lenguajes';
 import Proyectos from './pages/Proyectos';
 import SobreMi from './pages/SobreMi';
 import Contacto from './pages/Contacto';
-import Navigation from './ui/Navigation';
+import Navigation from './VarControl/Navigation';
 import Inicio from './pages/Inicio';
 
 export default function App() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from '../styles/sobremi.module.css';
-import LineTime from '../helper/LineTime';
+import LineTime from '../components/timeLine/LineTime';
 
 
 export default function SobreMi() {
