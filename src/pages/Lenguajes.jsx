@@ -8,7 +8,8 @@ export default function Lenguajes() {
 
   return (
     <div className={Style.cuerpoproyecto}>
-      <h1>Herramientas de tecnologia</h1>
+      <h1>Lenguajes de programación y tecnologías</h1>
+      <hr></hr>
         <Cards></Cards>
     </div>
   )

@@ -47,13 +47,15 @@ const create = ({email, text}) =>{
 
   return (
     <div className={Style.cuerpoproyecto}>
+      <h1></h1>
     <Container className='mt-5'>
       <Row>
         <Col ms="12" md={{spna:8, offset: 2}} lg={{spna:6, offset:3}}>
           <Card body>
-            <h3>
+            <h2>
            Contactame
-            </h3>
+            </h2>
+            <h4>Por favor, proporcione la siguiente información para poder establecer contacto con usted.</h4>
             <hr></hr>
             <Register errores={errores} onSubmitCallback={create}></Register>
           </Card>

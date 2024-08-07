@@ -21,7 +21,7 @@ export default function Files() {
         <div>
             <Container  md={{ span: 3, offset: 3 }}>
                 <Row className="mb-100">
-                    <Card className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
+                    <Card  border="dark" className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
                         <Card.Body>
                             <Card.Title>Gimnasio Fitness</Card.Title>
                             <Card.Text>Desarrollador Backend</Card.Text>
@@ -54,7 +54,7 @@ export default function Files() {
                         </Card.Body>
                     </Card>
 
-                    <Card className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
+                    <Card border="dark" className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
                         <Card.Body>
                             <Card.Title>Recursos Humanos Antigua</Card.Title>
                             <Card.Text>Desarrollador Fulltract</Card.Text>
@@ -90,7 +90,7 @@ export default function Files() {
                         </Card.Body>
                     </Card>
 
-                    <Card className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
+                    <Card  border="dark" className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
                         <Card.Body>
                             <Card.Title>Vitalmed</Card.Title>
                             <Card.Text>Administrador de redes sociales y pagina web</Card.Text>
