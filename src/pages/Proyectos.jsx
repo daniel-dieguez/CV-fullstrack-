@@ -1,25 +1,29 @@
 import React from 'react'
-import Styel from '../styles/calculadora.module.css';
+
+import Style from '../styles/proyec.module.css';
 import Calculadora from '../proyects/Calculadora';
 import Tareas from '../proyects/Tareas';
 import ComentariosUsers from '../proyects/ComentariosUsers'
-import Tashbaord from '../proyects/dashbaord';
+
+
 
 
 
 export default function Proyectos() {
   return (
-    <div className={Styel.cuerpoproyecto}>
-      <h1>Proyectos de desarrollo</h1>
-      <p className=''>Bienvenido, aqui podras encontrar los distintos que he desarrollado de forma independiente, entre ello
-        podras encontrar en formato imagen los proyectos que he realizado y tambien encontraras ejemplos dinamicos donde podras observar y ejecutar desde
-        tu depositivo.
+    <div className={Style.cuerpoproyecto}>
+      <h1 className={Style.titulo}>Proyectos de desarrollo</h1>
+      
+      <p className={Style.principal}>Bienvenido. Aquí podrás explorar los distintos proyectos
+         que he desarrollado de forma independiente. Encontrarás imágenes de estos proyectos, 
+         así como ejemplos dinámicos que podrás observar y ejecutar desde tu dispositivo.
       </p>
+      <hr />
 
       <Calculadora></Calculadora>
       <Tareas></Tareas>
       <ComentariosUsers></ComentariosUsers>
-      <Tashbaord></Tashbaord>
+      
 
      
 

@@ -1,10 +1,4 @@
-.cuerpoproyecto{
-    background:url('../img/Fodnooo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
 
-}
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -15,7 +9,14 @@
     font-size: 30px;
     color: rgb(16, 95, 164);
     text-align: center;
+    font-weight: bolder;
     
+}
+
+.principal{
+    font-size: 20px;
+    text-align: center;
+    height: 90px;
 }
 
 .parrafo{

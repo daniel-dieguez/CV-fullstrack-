@@ -8,8 +8,12 @@ import Contacto from './pages/Contacto';
 import Navigation from './VarControl/Navigation';
 import Inicio from './pages/Inicio';
 
+//
+
+
 export default function App() {
   return (
+    
     <Router className="navbarr">
     <div>
       <Navigation></Navigation>
@@ -23,7 +27,5 @@ export default function App() {
       <Route exact path="/contacto" element={<Contacto/>}>Contacto</Route>
     </Routes>
    </Router>
-   
-    
   )
 }
