@@ -14,7 +14,7 @@ export default function Register({errores, onSubmitCallback}) {
   
   
 
-  const submitForm = async (e, index) => {
+  const submitForm = async (e) => {
     e.preventDefault();
 
     if (!perfil) {
@@ -50,7 +50,7 @@ export default function Register({errores, onSubmitCallback}) {
 
       
       const data = await response.json();
-      console.log('Success:', data);
+    console.log('Success:', data);
       setPerfil(t => [...t, {...data, nombre_completo: nombreUsuario}]) 
       console.log("Se agrego una nueva imagen de forma actualizada de inmediata");
       

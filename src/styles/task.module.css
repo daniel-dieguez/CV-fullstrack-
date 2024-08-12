@@ -86,7 +86,7 @@ ol{
 }
 
 .texto{
-flex: 1;
+flex: 4;
 }
 
 .eliminarTarea, .subirTarea, .bajarTarea{

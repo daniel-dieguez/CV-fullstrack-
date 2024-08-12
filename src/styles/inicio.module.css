@@ -65,23 +65,36 @@
     flex-wrap: wrap;
 
 }
-/*
-.imges{
-    height: auto;
-    width: auto;
-    max-width: 10px;
-    max-height: 10px; 
+
+/*.imges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px; /* Espacio entre las imágenes 
 }*/
+
+.image{
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px,1fr)
+    );
+
+}
+
+
 .git{
-    width: 125px; 
+    width: 100px; 
     margin: 10px;  
 }
 .instagram{
-    width: 125px;
+    width: 100px;
     margin: 10px; 
 }
 .correo{
-    width: 150px;
+    width: 125px;
     margin: 10; 
 }
 
