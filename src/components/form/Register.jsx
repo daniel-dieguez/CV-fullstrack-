@@ -11,6 +11,8 @@ export default function Register( {errores, onSubmitCallback}) {
   const [text, setText] = useState("");
   const [nombre, setnombre] =useState("");
 
+ 
+
   const [dato, setDato] = useState([]);
 
 
@@ -35,8 +37,14 @@ export default function Register( {errores, onSubmitCallback}) {
     return r.json().then((data) =>({
       status: r.status,
       body:data,
-    }));
+    })).then(()=>{
+      console.log("Corre enviado");
+setEmail("");
+setText("");
+setnombre("");
+    })
   })
+
 
 
   
