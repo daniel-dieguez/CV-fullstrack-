@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import style from '../styles/task.module.css'
-import { button } from '@nextui-org/react';
 
 export default function Tareas() {
 
@@ -13,7 +12,11 @@ export default function Tareas() {
     const URLGet = 'http://localhost:9000/task/viewAll';
 
 
-    useEffect(() => {
+
+
+
+
+  useEffect(() => {
         axios.get(URLGet)
             .then(response => {
                 console.log(response.data);
@@ -22,7 +25,7 @@ export default function Tareas() {
             .catch(error => {
                 console.log("error en la peticion", error);
             });
-    }, []);
+    }, [1000]);
 
 
     const handleInput = (e) => {
@@ -51,13 +54,19 @@ export default function Tareas() {
                 if (!response.ok) {
                     throw new Error(`Error: ${response.statusText}`);
                 }
+                
+
 
                 const result = await response.json();
+                SetTask(t => [...t, { ...result, notas: result.notas || newTask }]);
+                setNewTask(''); // Limpia el campo de entrada
+
+                /*const result = await response.json();
                 console.log("la peticion fue un exito ", result);
                 SetTask(t => [...t, { ...result, notas: result.notas || newTask }]);
-            setNewTask('');
+            setNewTask('');*/
 
-            } catch (error) {
+         } catch (error) {
                 console.log("error en la peticion")
             }
         } else {
@@ -117,11 +126,11 @@ export default function Tareas() {
   return (
     <div className={style.body}>
     <div className={style.lista}>
-    <h1 className={style.titulo}>Listado</h1>
+    <h1 className={style.titulo}>Tareas</h1>
     <div>
         <input type="text"
         className={style.inputTask}
-            placeholder='ingresa la tarea que deses'
+            placeholder='Ingresa la tarea que deses'
             value={newTask}
             onChange={handleInput}
         />
@@ -130,12 +139,12 @@ export default function Tareas() {
 
     <ol>
         {task.map((item, index) =>
-            <li className={style.bineta} key={item.id_listado}>
-                <span className='texto'>{item.notas}</span>
+            <li className={style.bineta} key={item.id_listado || index}>
+                <span className={style.texto}>{item.notas}</span>
                 <button className={style.eliminarTarea} onClick={() => deleteTask(index, item.id_listado)}>Eliminar</button>
                 <button className={style.subirTarea} onClick={() => moveTaskUp(index)}>subir</button>
                 <button className={style.bajarTarea} onClick={() => moveTaskDown(index)}>bajar</button>
-            </li>
+            </li>  
         )}
     </ol>
 </div>

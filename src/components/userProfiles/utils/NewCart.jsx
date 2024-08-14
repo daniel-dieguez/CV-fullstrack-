@@ -30,10 +30,10 @@ export default function NewCart() {
   }, []);*/
 
   useEffect(() => {
-    fetchProfiles();
+    images();
   }, []);
 
-  const fetchProfiles = async () => {
+  const images = async () => {
     try {
       const response = await axios.get(url);
       const datos = response.data.map(item => ({

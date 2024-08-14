@@ -14,10 +14,11 @@ export default function Proyectos() {
     <div className={Style.cuerpoproyecto}>
       <h1 className={Style.titulo}>Proyectos de desarrollo</h1>
       
-      <p className={Style.principal}>Bienvenido. Aquí podrás explorar los distintos proyectos
-         que he desarrollado de forma independiente. Encontrarás imágenes de estos proyectos, 
-         así como ejemplos dinámicos que podrás observar y ejecutar desde tu dispositivo.
-      </p>
+      <p className={Style.principal}>Bienvenido. En esta sección podrás explorar 
+        algunos mini proyectos  en los que he trabajado de manera independiente.
+         A través de imágenes y ejemplos interactivos, podrás conocer más sobre mi 
+         enfoque y habilidades tanto en el desarrollo frontend como backend, los cuales
+          podrás ejecutar directamente desde tu dispositivo.</p>
       <hr />
 
       <Calculadora></Calculadora>
