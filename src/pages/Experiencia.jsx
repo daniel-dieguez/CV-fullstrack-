@@ -6,7 +6,7 @@ import Files from '../components/experiencia/Files';
 export default function Experiencia() {
   
   return (
-<div lassName={style.cuerpoproyecto}>
+<div className={style.cuerpoproyecto}>
 <Files ></Files>
 </div>
   )

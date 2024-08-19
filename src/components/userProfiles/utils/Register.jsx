@@ -3,7 +3,8 @@ import { Form, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 
-export default function Register({ errores, onSubmitCallback }) {
+export default function Register({ errores }) {
+
   const [perfil, setPerfil] = useState("");
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [comentario, setComentario] = useState("");
@@ -18,7 +19,7 @@ export default function Register({ errores, onSubmitCallback }) {
     e.preventDefault();
 
     if (!perfil) {
-      setErrores({ perfil: 'Please select a file' });
+      setErrores({ perfil: 'Selecciona una foto' });
       return;
     }
 
@@ -34,13 +35,16 @@ export default function Register({ errores, onSubmitCallback }) {
         body: formData,
       });
 
+     
+
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.json();
-      console.log('Success:', data);
+      const result = await response.json();
+      console.log('Success:', result);
+      
 
 
       Swal.fire({
@@ -67,9 +71,10 @@ export default function Register({ errores, onSubmitCallback }) {
   return (
     <Form onSubmit={submitForm} className="mt-4">
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Comentarios</Form.Label>
+        <Form.Label>Sube una imagen</Form.Label>
         <Form.Control
           type="file"
+          
           onChange={(e) => setPerfil(e.target.files[0])}
           isInvalid={errores.perfil}
         />
@@ -78,16 +83,18 @@ export default function Register({ errores, onSubmitCallback }) {
         </Form.Control.Feedback>
       </Form.Group>
       <Form.Group className="mb-2">
-        <Form.Label>Actualiza tu nombre</Form.Label>
+        <Form.Label>Agrega tu nombre</Form.Label>
         <Form.Control
           type='text'
+          value={nombreUsuario}
           placeholder='Agrega el nombre nuevo'
           onChange={e => setNombreUsuario(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Label>Actualiza tu nombre</Form.Label>
+        <Form.Label>Realiza tu comentario</Form.Label>
         <Form.Control
           as="textarea"
+          value={comentario}
           placeholder='Agrega tu comentario'
           onChange={e => setComentario(e.target.value)}
           rows={3} />

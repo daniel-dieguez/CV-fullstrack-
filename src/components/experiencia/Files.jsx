@@ -18,7 +18,7 @@ export default function Files() {
 
 
     return (
-        <div>
+        <div >
             <Container  md={{ span: 3, offset: 3 }}>
                 <Row className="mb-100">
                     <Card  border="dark" className="mr-3 mb-3 mt-5 mx-auto" style={{ width: '30rem' }}>
@@ -78,7 +78,7 @@ export default function Files() {
                                                 <div id="roll-text">
                                                     <NavDropdown.Item >Java</NavDropdown.Item>
                                                     <NavDropdown.Item >React Js</NavDropdown.Item>
-                                                    <NavDropdown.Item >Oracle</NavDropdown.Item>
+                                                    <NavDropdown.Item >SQLserver</NavDropdown.Item>
                                                     <NavDropdown.Item >Github</NavDropdown.Item>
                                                     <NavDropdown.Item >Docker</NavDropdown.Item>
                                                 </div>

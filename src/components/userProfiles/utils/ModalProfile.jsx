@@ -22,8 +22,8 @@ function ModalProfile({id}) {
       if (!selectedFile) {
         Swal.fire({
           icon: "error",
-          title: "Oops...",
-          text: "Please select a file to upload!",
+          title: "¡Falta un dato!",
+          text: "Debes de seleccionar una imagen",
         });
         return;
       }
@@ -56,8 +56,8 @@ function ModalProfile({id}) {
         console.error("Error:", error);
         Swal.fire({
           icon: "error",
-          title: "Oops...",
-          text: "Something went wrong!",
+          title: "Error en la peticion",
+          text: "Hubo un error, intentalo nuevamente.",
         });
       }
     };
@@ -85,7 +85,7 @@ function ModalProfile({id}) {
                 />
               </Form.Group >
               <Form.Group className="mb-2">
-                <Form.Label>Actualiza tu nombre</Form.Label>
+                <Form.Label>Actualiza tu nombre y apellido</Form.Label>
                   <Form.Control 
                   type='text'
                   placeholder='Agrega el nombre nuevo'
@@ -103,10 +103,10 @@ function ModalProfile({id}) {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-              Close
+              Cerrar
             </Button>
             <Button variant="primary" onClick={handleSave}>
-              Save Changes
+              Guardar cambios
             </Button>
           </Modal.Footer>
         </Modal>

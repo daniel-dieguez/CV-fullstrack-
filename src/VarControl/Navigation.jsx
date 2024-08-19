@@ -16,9 +16,14 @@ export default function Navigation() {
             <Nav.Link as={NavLink} to='/contacto'> Contactamé</Nav.Link>
           </Nav>
           <Nav>
-          <NavDropdown title="Más" id="main-menu">
-            <NavDropdown.Item as={NavLink} to='/sobreMi' >Sobre Mi</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to='/lenguaejes'>Lenguajes</NavDropdown.Item>
+          <NavDropdown style={{ fontSize: '14px' }}  title="Más" id="main-menu">
+            <NavDropdown.Item as={NavLink} to='/sobreMi' 
+            style={{ padding: '2px 4px', fontSize: '14px' }}            >
+              Sobre Mi</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/lenguaejes' 
+            style={{ padding: '2px 4px', fontSize: '14px' }}
+           >
+              Lenguajes</NavDropdown.Item>
 
           </NavDropdown>
           </Nav>

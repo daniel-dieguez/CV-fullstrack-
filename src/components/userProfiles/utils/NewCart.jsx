@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 import ModalProfile from './ModalProfile';
+import FotoP from '../../../img/Foto pefil.jpg';
+import Register from '../utils/Register';
 
 export default function NewCart() {
  
@@ -14,26 +16,14 @@ export default function NewCart() {
   const url = "http://localhost:9000/file/view";
   
 
-  
- /* useEffect(() => {
-    axios.get(url).then(response => {
-      console.log(response.data);
-      const datos = response.data.map(item => ({
-        ...item,
-        data: `data:image/png;base64,${item.data}`
-      }));
-      setPerfil(datos);
-    }).catch(error => {
-      console.error("Error en la petición", error);
-      // setError("Error en la petición");
-    });
-  }, []);*/
 
-  useEffect(() => {
-    images();
+  useEffect(()  => {
+    imagesPerfil();
+
+
   }, []);
 
-  const images = async () => {
+  const imagesPerfil = async () => {
     try {
       const response = await axios.get(url);
       const datos = response.data.map(item => ({
@@ -46,6 +36,9 @@ export default function NewCart() {
       console.error("Error en la petición", error);
     }
   };
+
+ 
+
 
 
   const deleteCart = async (index, id) => {
@@ -63,6 +56,10 @@ export default function NewCart() {
 
       console.log("Se ha borrado:", id);
      
+      console.log("Se ha borrado:", id);
+      const upPerfiles = perfil.filter((_, i) => i !== index);
+      setPerfil(upPerfiles);
+
 
     } catch (error) {
       console.error("Error al eliminar la nota:", error);
@@ -72,6 +69,19 @@ export default function NewCart() {
 
 return (
   <Container className="mb-4">
+    <Row className="justify-content-md-center">
+      <Col xs={12} sm={6} md={4} className="mb-4">
+        <Card border="light" bg={'dark'} text='white' style={{ width: '20rem' }}>
+          <Card.Img variant="top" src={FotoP} />
+          <Card.Body>
+            <Card.Title>Daniel Dieguez</Card.Title>
+            <Card.Text>Agradezco su tiempo al revisar mi CV. A continuación, puede 
+              realizar pruebas como subir, eliminar y actualizar datos </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+  
+  </Row>
   <Row className="justify-content-md-center">
     {perfil.map((item, index) => (
       <Col key={index} xs={12} sm={6} md={4} className="mb-4">
@@ -87,7 +97,9 @@ return (
       </Col>
     ))}
   </Row>
+
 </Container>
+
 );
 
 }
