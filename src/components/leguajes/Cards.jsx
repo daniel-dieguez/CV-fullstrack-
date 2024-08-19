@@ -18,7 +18,7 @@ export default function Cards() {
       <Carousel controls={false} interval={2500} pause='hover'>
         <Carousel.Item>
           <Row className="justify-content-md-center">
-            <Col xs={12} sm={6} md={3} lg={3} className="mb-4">
+            <Col xs={12} sm={6} md={3} lg={3} variant="top" className="mb-4">
               <Card border="dark" bg={'dark'} text='white' style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Java} style={{ height: '10rem', width: 'auto', objectFit: 'contain' }} />
                 <Card.Body>
@@ -91,14 +91,7 @@ export default function Cards() {
                   <Card.Title  className="text-center">Mysql</Card.Title>
                 </Card.Body >
               </Card>
-            </Col>
-            <Col xs={12} sm={6} md={3} lg={3} className="mb-4">
-              <Card border="dark" bg={'dark'}  text='white' style={{ width: '16rem' }}>
-                <Card.Body>
-                  <Card.Title  className="text-center font-weight-bold">Entre otras tecnologías</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
+            </Col>  
             
           </Row>
         </Carousel.Item>

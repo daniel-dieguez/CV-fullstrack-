@@ -20,8 +20,42 @@ export default function Register({ errores }) {
 
     if (!perfil) {
       setErrores({ perfil: 'Selecciona una foto' });
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Agrega una imagen",
+        showConfirmButton: false,
+        timer: 1500
+      });
       return;
     }
+
+    if (!nombreUsuario) {
+      setErrores({ nombreUsuario: 'Agrega un nombre' });
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Agrega un nombre",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      return;
+    }
+
+    
+    if (!comentario) {
+      setErrores({ comentario: 'Agrega un comentario ' });
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Debes de agregar un comentario",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      return;
+    }
+
+
 
     try {
       const formData = new FormData(); //se contruye esta funcion para que sea apta en body

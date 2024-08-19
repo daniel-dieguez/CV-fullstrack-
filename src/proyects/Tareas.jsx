@@ -2,12 +2,18 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import style from '../styles/task.module.css'
+import { isObjEmpty } from '../components/form/helper/Object';
+import validator from 'validator';
+import Swal from 'sweetalert2';
 
 export default function Tareas() {
 
   const [task, SetTask] = useState([]);
     const [newTask, setNewTask] = useState('');
     const [id, setId] = useState("");
+
+    
+  const [errores, setErrores] = useState("");
 
     const URLGet = 'http://localhost:9000/task/viewAll';
 
@@ -28,9 +34,11 @@ export default function Tareas() {
     }, [1000]);
 
 
-    const handleInput = (e) => {
+    const handleInput = (e,{newTask}) => {
         e.preventDefault();
         setNewTask(e.target.value)
+
+       
         
     };
 
@@ -70,7 +78,13 @@ export default function Tareas() {
                 console.log("error en la peticion")
             }
         } else {
-            console.log("la nota esta vacia")
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Debes de agregar una tarea",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }
     };
 

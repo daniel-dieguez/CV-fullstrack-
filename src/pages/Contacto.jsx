@@ -24,7 +24,7 @@ const create = ({email, text}) =>{
   }
 
   if(validator.isEmpty(text)){
-    errores.text = 'Debes de agregar un comentario '
+    errores.text = 'Debes de agregar un comentario ';
   }
 
 
@@ -55,7 +55,7 @@ const create = ({email, text}) =>{
             <h2>
            Contactame
             </h2>
-            <h4>Por favor, proporcione la siguiente información para poder establecer contacto con usted.</h4>
+            <h4>Le agradecería que pudiera proporcionar la siguiente información para coordinar una reunión. Le enviare un correo electrónico con los detalles.</h4>
             <hr></hr>
             <Register errores={errores} onSubmitCallback={create}></Register>
           </Card>
