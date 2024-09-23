@@ -17,7 +17,7 @@ export default function Register( {errores, onSubmitCallback}) {
 
 
 
- const submitForm = (e) => {
+ const submitForm = async (e) => {
   e.preventDefault();
   onSubmitCallback({email, text, nombre});
 
@@ -27,7 +27,7 @@ export default function Register( {errores, onSubmitCallback}) {
     comentario_usuario: text
 };
 
-  const URL = "http://localhost:9000/contacto/sendEmail";
+  const URL = "http://52.72.3.107:9000/contacto/sendEmail";
   fetch(URL,{
     method: 'POST',
     body: JSON.stringify(data),

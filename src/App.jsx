@@ -25,6 +25,7 @@ export default function App() {
       <Route exact path="/lenguaejes" element={<Lenguajes/>}>lenguajes</Route>
       <Route exact path="/proyecots" element={<Proyectos/>}>proyectos</Route>
       <Route exact path="/contacto" element={<Contacto/>}>Contacto</Route>
+      <Route path="*" element={<Inicio />} />
     </Routes>
    </Router>
   )

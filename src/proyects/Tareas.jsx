@@ -9,18 +9,13 @@ import Swal from 'sweetalert2';
 export default function Tareas() {
 
   const [task, SetTask] = useState([]);
-    const [newTask, setNewTask] = useState('');
+    const [newTask, setNewTask] = useState([]);
     const [id, setId] = useState("");
 
     
   const [errores, setErrores] = useState("");
 
-    const URLGet = 'http://localhost:9000/task/viewAll';
-
-
-
-
-
+    const URLGet = 'http://52.72.3.107:9000/task/viewAll';
 
   useEffect(() => {
         axios.get(URLGet)
@@ -34,7 +29,7 @@ export default function Tareas() {
     }, [1000]);
 
 
-    const handleInput = (e,{newTask}) => {
+    const handleInput = (e) => {
         e.preventDefault();
         setNewTask(e.target.value)
 
@@ -44,7 +39,7 @@ export default function Tareas() {
 
     const addTask = async () => {
 
-        const urlAdd = 'http://localhost:9000/task/create';
+        const urlAdd = 'http://52.72.3.107:9000/task/create';
 
         if (newTask.trim() !== "") {
 
@@ -95,13 +90,14 @@ export default function Tareas() {
             return;
         }
 
-        const urlDele = 'http://localhost:9000/task/delete';
+        const urlDele = 'http://52.72.3.107:9000/task/delete/';
         try {
-            const response = await fetch(`${urlDele}/${id_listado}`, {
+            const response = await fetch((`${urlDele}${id_listado}`), {
                 method: 'DELETE',
             });
 
             if (!response.ok) {
+                console.log("eror bro")
                 throw new Error(`Error: ${response.statusText}`);
             }
 
@@ -132,10 +128,6 @@ export default function Tareas() {
         }
 
     }
-
-
-
-
 
   return (
     <div className={style.body}>

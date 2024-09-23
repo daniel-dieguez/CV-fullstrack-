@@ -63,7 +63,7 @@ export default function Register({ errores }) {
       formData.append('nombre_completo', nombreUsuario);
       formData.append('comentario_user', comentario);
 
-      const urlPost = 'http://localhost:9000/file/Upfile';
+      const urlPost = 'http://52.72.3.107:9000/file/Upfile';
       const response = await fetch(urlPost, {
         method: 'POST',
         body: formData,
@@ -84,14 +84,14 @@ export default function Register({ errores }) {
       Swal.fire({
         icon: "success",
         title: "Carga exitosa",
-        text: "Se agrego nueva carta",
+        text: "Se agrego tu comentario",
+        text: "Carga la pagina nuevamente para revisar tu comentario "
       });
 
 
       setComentario("");
       setNombreUsuario("");
       setPerfil(null);
-      console.log("vacio de datos formularios");
 
 
 

@@ -13,15 +13,20 @@ export default function NewCart() {
   const [perfil, setPerfil] = useState([]);
 
   
-  const url = "http://localhost:9000/file/view";
+  const url = "http://52.72.3.107:9000/file/view";
   
 
 
   useEffect(()  => {
     imagesPerfil();
 
+    
 
-  }, []);
+
+  },  [1000]);
+
+  
+  
 
   const imagesPerfil = async () => {
     try {
@@ -43,10 +48,10 @@ export default function NewCart() {
 
   const deleteCart = async (index, id) => {
 
-    const urlDelete = 'http://localhost:9000/file/deliteImages';
+    const urlDelete = 'http://52.72.3.107:9000/file/deliteImages/';
     
     try {
-      const response = await fetch(`${urlDelete}/${id}`, {
+      const response = await fetch(`${urlDelete}${id}`, {
         method: 'DELETE',
       });
 

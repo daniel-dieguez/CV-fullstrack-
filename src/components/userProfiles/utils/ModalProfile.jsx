@@ -35,7 +35,7 @@ function ModalProfile({id}) {
       */
   
       try {                                                                      //abajo de esta coma se agrega el formData de arriba     
-        const response = await axios.put(`http://localhost:9000/file/UpFile/${id}`, {
+        const response = await axios.put(`http://52.72.3.107:9000/file/UpFile/${id}`, {
           file:selectedFile,
           nombre_completo:nombreUsuario,
           comentario_user:comentario
@@ -75,7 +75,7 @@ function ModalProfile({id}) {
             <Modal.Title>Cambio de datos</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form>
+            <Form> 
               <Form.Group className="mb-2">
                 <Form.Label>cambia la imagen</Form.Label>
                 <Form.Control
